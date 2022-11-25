@@ -13,6 +13,7 @@ import AccountModal from "@/components/NewWallet/AccountModal";
 import { FC } from "react";
 import graphic from "src/images/graphic.png";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const Home: FC = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -27,8 +28,8 @@ const Home: FC = () => {
         <div className="bg-black text-white mt-[-8rem] text-[3.25rem] z-90 leading-none flex items-center justify-center font-aldrich lg:pl-[-25rem] lg:pt-[-26rem] lg:text-8xl ">
           INSTANT <br /> COMMUNITIES. <br /> INSTANT <br /> EXPERIENCES.
         </div>
-        <div>{/* <Footer/> */}</div>
       </div>
+      <Footer />
     </div>
   );
 };

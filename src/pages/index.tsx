@@ -3,8 +3,7 @@ import React from "react";
 import Image from "next/image";
 import ConnectButton from "@/components/NewWallet/ConnectButton";
 import Link from "next/link";
-import Modal from "@/components/Modals_Buttons/QuestionsModal";
-import Arrow from "images/Arrow.png";
+import Duffle from "src/images/Duffle.png";
 import Addresses from "@/components/AddressList/Addresses";
 import Layout from "@/components/NewWallet/Layout";
 import Head from "next/head";
@@ -12,24 +11,41 @@ import { useDisclosure } from "@chakra-ui/react";
 import AccountModal from "@/components/NewWallet/AccountModal";
 import { FC } from "react";
 import graphic from "src/images/graphic.png";
-import Header from "@/components/Header";
+import Header from "@/components/HomeHeader";
 import Footer from "@/components/Footer";
 
 const Home: FC = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-
   return (
-    <div className="min-h-screen bg-black">
-      <Header />
-      <div className="bg-black flex flex-col -z-9 pt-24">
-        <div className=" -z-9 pl-20 pr-10 lg:ml-[38rem] lg:max-w-3xl lg:mt-[-1rem]">
-          <Image src={graphic} alt="graphic " className="animate-pulse -z-9 " />
-        </div>
-        <div className="bg-black text-white mt-[-8rem] text-[3.25rem] z-90 leading-none flex items-center justify-center font-aldrich lg:pl-[-25rem] lg:pt-[-26rem] lg:text-8xl ">
-          INSTANT <br /> COMMUNITIES. <br /> INSTANT <br /> EXPERIENCES.
+    <div>
+      <div className="">
+        <Header />
+      </div>
+
+      <div className="relative flex min-h-screen bg-white items-center ">
+        <div className="max-w-7xl mx-auto ">
+          <h1 className="mb-10 font-Roboto font-normal text-4xl sm:max-w-2xl sm:text-5xl sm:leading-snug text-black leading-snug flex items-center justify-center pl-10">
+            DUFFLE IS COMMUNITY INFRA FOR WEB3. ENTER & CREATE YOUR OWN
+            COMMUNITY IN MINUTES.
+          </h1>
+
+          <div className="pl-10">
+            <Link href="/options">
+              <button className="bg-[#D9D9D9] text-black px-5 py-2 font-Roboto font-normal">
+                ENTER APP
+              </button>
+            </Link>
+            <div className=" ml-[30em] mt-[-5.5em] hidden sm:block md:block ">
+              <Image
+                src={Duffle}
+                alt="Picture of NFT"
+                width={170}
+                height={150}
+                className="animate-spin-slow"
+              />
+            </div>
+          </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

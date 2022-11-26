@@ -38,9 +38,11 @@ const Pay = () => {
           </Link>
 
           <div className="flex items-center justify-center">
-            <button className="bg-[#D9D9D9] text-black px-5 py-2 font-Roboto font-normal mb-5">
-              VIEW GROUPS
-            </button>
+            <Link href="/view">
+              <button className="bg-[#D9D9D9] text-black px-5 py-2 font-Roboto font-normal mb-5">
+                VIEW GROUPS
+              </button>
+            </Link>
           </div>
         </div>
       </section>

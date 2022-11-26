@@ -20,11 +20,10 @@ const CreateBallot = () => {
       var requestOptions = {
         method: "GET",
       };
-
       const fetchURL = `${baseURL}?owner=${wallet}`;
-
       nfts = await fetch(fetchURL, requestOptions).then((data) => data.json());
     } else {
+      let requestOptions: undefined = undefined;
       console.log("fetching nfts for collection owned by address");
       const fetchURL = `${baseURL}?owner=${wallet}&contractAddresses%5B%5D=${collection}`;
       nfts = await fetch(fetchURL, requestOptions).then((data) => data.json());
@@ -156,6 +155,11 @@ const CreateBallot = () => {
 
 export default CreateBallot;
 
+// TODO:
+// - this page
 // program add all address from collection
 // program add and delete recipients
 // add create new group functionality
+
+// fix wallet and its design
+// create view ballot pages

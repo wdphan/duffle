@@ -33,7 +33,7 @@ const Pay = () => {
       </Link>
       <section className="flex flex-col items-center min-h-screen justify-center">
         <div className="font-Roboto">
-          <h1 className=" text-5xl text-center pb-10 max-w-lg leading-snug">
+          <h1 className="text-[2.5rem] text-center pb-10 max-w-md sm:max-w-2xl leading-snug">
             WHAT WOULD YOU LIKE TO DO?
           </h1>
         </div>

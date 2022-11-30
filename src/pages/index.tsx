@@ -23,7 +23,7 @@ const Home: FC = () => {
     <div className="">
       <div className="relative min-h-screen bg-white flex items-center justify-center max-w-md sm:max-w-full  ">
         <div className="absolute top-6 right-6">
-          {/* {
+          {
             // Our connect button will only handle opening
           }
           <ConnectButton handleOpenModal={onOpen} />
@@ -31,9 +31,9 @@ const Home: FC = () => {
             // Our Account modal will handle open state & closing
           }
           <AccountModal isOpen={isOpen} onClose={onClose} />
-          { */}
-          {/* // Our connect button will only handle opening
-          } */}
+          {
+            // Our connect button will only handle opening
+          }
           <ConnectButtonTest handleOpenModal={onOpen} />
           {
             // Our Account modal will handle open state & closing

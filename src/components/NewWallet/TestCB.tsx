@@ -38,7 +38,7 @@ export default function ConnectButtonTest({ handleOpenModal }: Props) {
   // console.log('globalState', globalState)
   return globalState.account ? (
     <Box
-      className="flex items-center font-Roboto justify-center bg-[#D9D9D9] text-black py-0 border-2"
+      className="flex items-center font-Roboto justify-center bg-[#D9D9D9] text-black py-0 "
       //   mt={3}
       //   display="flex"
       //   alignItems="center"

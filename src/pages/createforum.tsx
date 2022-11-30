@@ -25,14 +25,16 @@ const CreateForum = () => {
 
       <div className="flex flex-col justify-center py-8 bg-white min-h-screen items-center ">
         <div className="flex flex-col w-full justify-center items-center gap-y-2">
-          <h1 className="mb-2 text-3xl max-w-md text-center font-Roboto font-normal text-black">
+          <h1 className="mb-10 text-5xl max-w-md text-center font-Roboto font-normal leading-snug text-black">
             TELL US ABOUT YOUR FORUM
           </h1>
-          <div className="max-w-md flex flex-col ">
-            <div className="flex justify-start items-start">FORUM NAME</div>
+          <div className="max-w-7xl flex flex-col ">
+            <div className="flex justify-start items-start font-Roboto ">
+              FORUM NAME
+            </div>
             <input
               disabled={fetchForCollection}
-              className=" border-2 border-[#D9D9D9] py-2 pr-44 text-[#EFEFEF]focus:outline-blue-300 mt-4 placeholder:italic  "
+              className=" border-2 border-[#D9D9D9] py-2 w-[25rem] sm:w-[28rem] text-[#EFEFEF]focus:outline-blue-300 mt-4 placeholder:italic  "
               onChange={(e) => {
                 setWalletAddress(e.target.value);
               }}
@@ -40,29 +42,29 @@ const CreateForum = () => {
               type={"text"}
               placeholder=" TITLE NAME"
             ></input>
-            <div className="flex justify-start items-start mt-4 ">
+            <div className="flex justify-start items-start mt-4 font-Roboto ">
               FORUM DESCRIPTION
             </div>
-            <input
-              className=" pb-44 pr-44 border-[#D9D9D9] text-black focus:outline-blue-300 mt-4 border-2 placeholder:italic "
-              onChange={(e) => {
-                setCollectionAddress(e.target.value);
-              }}
-              value={collection}
-              type={"text"}
-              placeholder=" MISSION STATEMENT"
-            ></input>
+            <div className="">
+              <textarea
+                className=" pb-44 w-[25rem] sm:w-[28rem] border-[#D9D9D9] text-black focus:outline-blue-300 mt-4 border-2 placeholder:italic text-wrap"
+                onChange={(e) => {
+                  setCollectionAddress(e.target.value);
+                }}
+                value={collection}
+                placeholder=" MISSION STATEMENT"
+              ></textarea>
+            </div>
           </div>
 
           <div className="flex max-w-md space-x-2 my-5">
-            <div className="flex flex-row items-center justify-center"></div>
             <button
-              className={" text-black font-inter bg-[#D9D9D9] px-5 py-2  "}
+              className={" text-black font-Roboto  bg-[#D9D9D9] px-5 py-2 "}
             >
               CREATE NEW FORUM
             </button>
             <button
-              className={" text-black font-inter bg-[#D9D9D9] px-5 py-2  "}
+              className={" text-black  bg-[#D9D9D9] px-5 py-2 font-Roboto  "}
             >
               ADD MEMBERS
             </button>
@@ -74,12 +76,3 @@ const CreateForum = () => {
 };
 
 export default CreateForum;
-
-// TODO:
-// - this page
-// program add all address from collection
-// program add and delete recipients
-// add create new group functionality
-
-// fix wallet and its design
-// create view ballot pages

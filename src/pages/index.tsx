@@ -42,12 +42,13 @@ const Home: FC = () => {
                 ENTER APP
               </button>
             </Link>
-            <div className="ml-[30em] mt-[-4.5em] hidden sm:block md:block ">
+            {/* <div className="ml-[30em] mt-[-4.5em] hidden sm:block md:block "> */}
+            <div className="ml-[13em] lg:ml-[30em] md:ml-[30em] sm:ml-[30em] mt-[-4.5em]  sm:block md:block ">
               <Image
                 src={Duffle}
                 alt="Picture"
-                width={160}
-                height={150}
+                width={165}
+                height={148}
                 className="animate-spin-slow"
               />
             </div>

@@ -23,7 +23,14 @@ const Pay = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <div>
-      <HomeHeader />
+      <div className="absolute top-6 right-6">
+        <ConnectButton handleOpenModal={undefined} />
+      </div>
+      <Link href="/">
+        <a className="font-Roboto max-w-7xl text-2xl font-bold absolute top-6 left-6">
+          DUFFLE
+        </a>
+      </Link>
       <section className="flex flex-col items-center min-h-screen justify-center">
         <div className="font-Roboto">
           <h1 className=" text-5xl text-center pb-10">

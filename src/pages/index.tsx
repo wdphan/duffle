@@ -23,9 +23,13 @@ const Home: FC = () => {
         <div className="absolute top-6 right-6">
           <ConnectButton handleOpenModal={undefined} />
         </div>
-        <div className="absolute top-6 left-6 font-Roboto max-w-7xl text-2xl font-bold">
-          DUFFLE
-        </div>
+
+        <Link href="/">
+          <a className="font-Roboto max-w-7xl text-2xl font-bold absolute top-6 left-6">
+            DUFFLE
+          </a>
+        </Link>
+
         <div className="max-w-7xl ">
           <h1 className="mb-10 font-Roboto font-normal text-[2.5rem] sm:max-w-2xl sm:text-5xl sm:leading-snug text-black leading-snug max-w-sm">
             DUFFLE IS COMMUNITY INFRA FOR WEB3. ENTER & CREATE YOUR OWN

@@ -3,6 +3,8 @@ import { BookOpenIcon, CodeIcon, ShareIcon } from "@heroicons/react/outline";
 import { useState } from "react";
 import { NFTCard } from "src/components/NFTCard";
 import Header from "@/components/HomeHeader";
+import ConnectButton from "@/components/NewWallet/ConnectButton";
+import Link from "next/link";
 
 const CreateBallot = () => {
   const [wallet, setWalletAddress] = useState("");
@@ -55,11 +57,16 @@ const CreateBallot = () => {
 
   return (
     <div>
-      {" "}
-      <div className="">
-        <Header />
+      <div className="absolute top-6 right-6">
+        <ConnectButton handleOpenModal={undefined} />
       </div>
-      <div className="flex flex-col justify-center py-8 bg-white h-100vh items-center mt-32 ">
+      <Link href="/">
+        <a className="font-Roboto max-w-7xl text-2xl font-bold absolute top-6 left-6">
+          DUFFLE
+        </a>
+      </Link>
+
+      <div className="flex flex-col justify-center py-8 bg-white min-h-screen items-center ">
         <div className="flex flex-col w-full justify-center items-center gap-y-2">
           <h1 className="mb-2 text-3xl w-3/4 text-center font-Roboto  font-normal text-black">
             ADD ADDRESSES TO YOUR NEW GROUP WITH A COUPLE CLICKS
@@ -67,7 +74,7 @@ const CreateBallot = () => {
 
           <input
             disabled={fetchForCollection}
-            className="w-1/2 border-2 border-[#D9D9D9] py-2 px-2  text-[#EFEFEF]focus:outline-blue-300 mt-4 placeholder:italic"
+            className="w-1/2 border-2 border-[#D9D9D9] py-2 px-2  text-[#EFEFEF]focus:outline-blue-300 mt-4 placeholder:italic "
             onChange={(e) => {
               setWalletAddress(e.target.value);
             }}
@@ -97,7 +104,7 @@ const CreateBallot = () => {
           <div className="space-x-5 flex flex-row items-center justify-center">
             <button
               className={
-                " text-black font-inter bg-[#D9D9D9] px-5 py-2 mt-3 mb-3 text-lg"
+                " text-black font-inter bg-[#D9D9D9] px-5 py-2 mt-3 mb-3 "
               }
               onClick={() => {
                 if (fetchForCollection) {
@@ -109,9 +116,7 @@ const CreateBallot = () => {
             </button>
           </div>
           <button
-            className={
-              " text-black font-inter bg-[#D9D9D9] px-5 py-2 mb-10 text-lg"
-            }
+            className={" text-black font-inter bg-[#D9D9D9] px-5 py-2 mb-10 "}
           >
             CREATE NEW GROUP
           </button>

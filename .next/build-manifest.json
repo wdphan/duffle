@@ -30,10 +30,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/options": [
+    "/createforum": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/options.js"
+      "static/chunks/pages/createforum.js"
     ]
   },
   "ampFirstPages": []

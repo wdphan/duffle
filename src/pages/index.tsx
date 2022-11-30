@@ -21,7 +21,7 @@ const Home: FC = () => {
         <Header />
       </div>
 
-      <div className="relative flex bg-white items-center mt-56 max-w-md sm:max-w-full">
+      <div className="relative flex bg-white items-center mt-32 max-w-md sm:max-w-full">
         <div className="max-w-7xl mx-auto ">
           <h1 className="mb-10 font-Roboto font-normal text-[2.5rem] sm:max-w-2xl sm:text-5xl sm:leading-snug text-black leading-snug flex items-center justify-center pl-10 ">
             DUFFLE IS COMMUNITY INFRA FOR WEB3. ENTER & CREATE YOUR OWN

@@ -30,15 +30,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
+    "/newBallot": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/newBallot.js"
+    ],
     "/options": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/options.js"
-    ],
-    "/view": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/view.js"
     ]
   },
   "ampFirstPages": []

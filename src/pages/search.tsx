@@ -107,14 +107,6 @@ const CreateBallot = () => {
             >
               SEARCH
             </button>
-
-            <button
-              className={
-                " text-black font-inter bg-[#D9D9D9] px-5 py-2 mt-3 mb-3 text-lg"
-              }
-            >
-              ADD ALL
-            </button>
           </div>
           <button
             className={

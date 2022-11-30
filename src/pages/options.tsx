@@ -33,14 +33,14 @@ const Pay = () => {
         <div className="flex items-center justify-center space-x-6 sm:space-x-6">
           <Link href="/search">
             <button className="bg-[#D9D9D9] text-black px-5 py-2 font-Roboto font-normal mb-5">
-              CREATE GROUP
+              CREATE BALLOT
             </button>
           </Link>
 
           <div className="flex items-center justify-center">
             <Link href="/view">
               <button className="bg-[#D9D9D9] text-black px-5 py-2 font-Roboto font-normal mb-5">
-                VIEW GROUPS
+                VIEW BALLOTS
               </button>
             </Link>
           </div>

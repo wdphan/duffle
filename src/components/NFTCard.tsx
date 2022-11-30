@@ -2,8 +2,38 @@ import { networkInterfaces } from "os";
 import Link from "next/link";
 import Image from "next/image";
 import link from "src/images/link.png";
+import { IAddress } from "@/components/AddressList/Interfaces/interfaces.js";
+import Address from "src/components/AddressList/Address";
+import { useContractWrite } from "wagmi";
+import splitz from "src/pages/splitz.json";
+import {
+  useAccount,
+  usePrepareContractWrite,
+  useWaitForTransaction,
+} from "wagmi";
+import { useRouter } from "next/router";
+import { ChangeEvent, useState } from "react";
 
 export const NFTCard = ({ nft }) => {
+  const [address, setAddress] = useState<string>("");
+  const [owner, setOwner] = useState<string>("");
+
+  const [addressList, setAddressList] = useState<IAddress[]>([]);
+
+  const addAddress = (): void => {
+    const newAddress = { addressName: address }
+    setAddressList([...addressList, newAddress])
+    setAddress('')
+}
+
+const deleteAddress = (addressToDelete: string): void => {
+    setAddressList(
+        addressList.filter(address => {
+            return address.addressName != addressToDelete
+        })
+    )
+}
+
   return (
     <div className="w-48 flex flex-col">
       <div className="rounded-lg">

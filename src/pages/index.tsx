@@ -13,8 +13,6 @@ import { FC } from "react";
 import graphic from "src/images/graphic.png";
 import Header from "@/components/HomeHeader";
 import Footer from "@/components/Footer";
-import ConnectButtonTest from "@/components/NewWallet/TestCB";
-import AccountModalTest from "@/components/NewWallet/TestM";
 
 const Home: FC = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();

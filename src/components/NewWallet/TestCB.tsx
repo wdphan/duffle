@@ -104,7 +104,7 @@ export default function ConnectButtonTest({ handleOpenModal }: Props) {
         borderColor: "black",
       }}
     >
-      CONNECT WITH METAMASK
+      CONNECT W/METAMASK
     </Button>
   );
 }

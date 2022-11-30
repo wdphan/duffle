@@ -26,10 +26,10 @@ export default function AccountModalTest({ isOpen, onClose }: Props) {
   const { globalState, dispatch } = useContext(globalContext);
   const { account, provider } = globalState;
   const chainIdPaths = {
-    1: "", // mainnet
-    42: "kovan.",
-    3: "ropsten.",
-    4: "rinkeby.",
+    // 1: "", // mainnet
+    // 42: "kovan.",
+    // 3: "ropsten.",
+    // 4: "rinkeby.",
     5: "goerli.",
   };
   const chainPath = provider && chainIdPaths[parseInt(provider.chainId)];

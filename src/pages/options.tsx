@@ -42,9 +42,7 @@ const Pay = () => {
             <div className="flex items-center justify-center space-x-6 sm:space-x-6 mb-10 font-Roboto">
               Group It offers Free voting Upgradability to Governor Centralized
               membership using link invitations Managing treasury with Gnosis
-              Safe It requires Nothing. It’s free and easy Best for Communities
-              on the path to decentralization with a shared treasury Inviting
-              members and start voting on ideas
+              Safe It requires Nothing.
             </div>
             <Link href="/createforum">
               <button className="bg-[#D9D9D9] text-black px-5 py-2 font-Roboto font-normal mb-5 ">
@@ -56,9 +54,7 @@ const Pay = () => {
             <div className="flex items-center justify-center space-x-6 sm:space-x-6 mb-10 font-Roboto">
               Group It offers Free voting Upgradability to Governor Centralized
               membership using link invitations Managing treasury with Gnosis
-              Safe It requires Nothing. It’s free and easy Best for Communities
-              on the path to decentralization with a shared treasury Inviting
-              members and start voting on ideas
+              Safe It requires Nothing.
             </div>
             <Link href="/viewforums">
               <button className="bg-[#D9D9D9] text-black px-5 py-2 font-Roboto font-normal mb-5">

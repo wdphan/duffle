@@ -24,9 +24,9 @@ const Pay = () => {
   return (
     <div>
       <HomeHeader />
-      <section>
-        <div className="flex items-center justify-center mt-44 font-Roboto pb-5">
-          <h1 className="pt-32 text-5xl text-center mb-5 ">
+      <section className="flex flex-col items-center min-h-screen justify-center">
+        <div className="font-Roboto">
+          <h1 className=" text-5xl text-center pb-10">
             WHAT WOULD YOU LIKE TO DO?
           </h1>
         </div>

@@ -25,7 +25,7 @@ const CreateForum = () => {
 
       <div className="flex flex-col justify-center py-8 bg-white min-h-screen items-center ">
         <div className="flex flex-col w-full justify-center items-center gap-y-2">
-          <h1 className="mb-10 text-[2.5rem] max-w-md sm:max-w-2xl  max-w-md text-center font-Roboto font-normal leading-snug text-black">
+          <h1 className="mb-10 text-[2.5rem] max-w-md sm:max-w-2xl text-center font-Roboto font-normal leading-snug text-black">
             EXPLORE FORUMS
           </h1>
         </div>

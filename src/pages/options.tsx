@@ -37,7 +37,7 @@ const Pay = () => {
             WHAT WOULD YOU LIKE TO DO?
           </h1>
         </div>
-        <div className="flex flex-col md:flex md:flex-row max-w-md md:max-w-2xl md:space-x-10 space-y-5 md:space-y-0">
+        <div className="flex flex-col md:flex md:flex-row max-w-sm md:max-w-2xl md:space-x-10 space-y-5 md:space-y-0">
           <div className="flex flex-col">
             <div className="flex items-center justify-center space-x-6 sm:space-x-6 mb-10 font-Roboto">
               Group It offers Free voting Upgradability to Governor Centralized

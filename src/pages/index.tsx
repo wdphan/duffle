@@ -13,6 +13,8 @@ import { FC } from "react";
 import graphic from "src/images/graphic.png";
 import Header from "@/components/HomeHeader";
 import Footer from "@/components/Footer";
+import ConnectButtonTest from "@/components/NewWallet/TestCB";
+import AccountModalTest from "@/components/NewWallet/TestM";
 
 const Home: FC = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -21,7 +23,22 @@ const Home: FC = () => {
     <div className="">
       <div className="relative min-h-screen bg-white flex items-center justify-center max-w-md sm:max-w-full  ">
         <div className="absolute top-6 right-6">
-          <ConnectButton handleOpenModal={undefined} />
+          {/* {
+            // Our connect button will only handle opening
+          }
+          <ConnectButton handleOpenModal={onOpen} />
+          {
+            // Our Account modal will handle open state & closing
+          }
+          <AccountModal isOpen={isOpen} onClose={onClose} />
+          { */}
+          {/* // Our connect button will only handle opening
+          } */}
+          <ConnectButtonTest handleOpenModal={onOpen} />
+          {
+            // Our Account modal will handle open state & closing
+          }
+          <AccountModalTest isOpen={isOpen} onClose={onClose} />
         </div>
 
         <Link href="/">

@@ -22,14 +22,14 @@ type Props = {
   onClose: any;
 };
 
-export default function AccountModal({ isOpen, onClose }: Props) {
+export default function AccountModalTest({ isOpen, onClose }: Props) {
   const { globalState, dispatch } = useContext(globalContext);
   const { account, provider } = globalState;
   const chainIdPaths = {
-    1: "", // mainnet
-    42: "kovan.",
-    3: "ropsten.",
-    4: "rinkeby.",
+    // 1: "", // mainnet
+    // 42: "kovan.",
+    // 3: "ropsten.",
+    // 4: "rinkeby.",
     5: "goerli.",
   };
   const chainPath = provider && chainIdPaths[parseInt(provider.chainId)];
@@ -48,14 +48,20 @@ export default function AccountModal({ isOpen, onClose }: Props) {
     <Modal isOpen={isOpen} onClose={onClose} isCentered size="md">
       <ModalOverlay />
       <ModalContent
-        background="gray.900"
+        background="white"
         border="1px"
         borderStyle="solid"
-        borderColor="gray.700"
-        borderRadius="3xl"
+        borderColor="black"
+        borderRadius="none"
       >
-        <ModalHeader color="white" px={4} fontSize="lg" fontWeight="medium">
-          Account
+        <ModalHeader
+          color="black"
+          className="font-Roboto"
+          px={4}
+          fontSize="lg"
+          fontWeight="medium"
+        >
+          ACCOUNT
         </ModalHeader>
         <ModalCloseButton
           color="white"
@@ -67,20 +73,21 @@ export default function AccountModal({ isOpen, onClose }: Props) {
         <ModalBody pt={0} px={4}>
           <Box>
             <Flex justifyContent="space-between" alignItems="center" mb={3}>
-              <Text color="gray.400" fontSize="sm">
-                Connected with{" "}
-                {provider?.isMetaMask ? "MetaMask" : "WalletConnect"}
+              <Text color="black" className="font-Roboto" fontSize="sm">
+                Connected with {provider?.isMetaMask ? "MetaMask" : "null"}
               </Text>
               <Button
                 variant="outline"
                 size="sm"
-                borderColor="blue.800"
-                borderRadius="3xl"
-                color="blue.500"
+                background="#D9D9D9"
+                // borderColor="black"
+                borderRadius="none"
+                color="black"
                 fontSize="13px"
+                className="font-Roboto"
                 fontWeight="normal"
-                px={2}
-                height="26px"
+                px={5}
+                py={2}
                 _hover={{
                   background: "none",
                   borderColor: "blue.300",
@@ -88,17 +95,18 @@ export default function AccountModal({ isOpen, onClose }: Props) {
                 }}
                 onClick={handleDeactivateAccount}
               >
-                Disconnect
+                DISCONNECT
               </Button>
             </Flex>
             <Flex alignItems="center" mt={2} mb={4} lineHeight={1}>
               <Identicon />
               <Text
-                color="white"
+                color="black"
                 fontSize="xl"
                 fontWeight="semibold"
                 ml="2"
                 lineHeight="1.1"
+                className="font-Roboto"
               >
                 {account &&
                   `${account.slice(0, 6)}...${account.slice(
@@ -110,7 +118,7 @@ export default function AccountModal({ isOpen, onClose }: Props) {
             <Flex alignContent="center" m={3}>
               <Button
                 variant="link"
-                color="gray.400"
+                color="white"
                 fontWeight="normal"
                 fontSize="sm"
                 _hover={{
@@ -124,19 +132,20 @@ export default function AccountModal({ isOpen, onClose }: Props) {
               {chainPath ? (
                 <Link
                   fontSize="sm"
+                  className="font-Roboto"
                   display="flex"
                   alignItems="center"
                   href={`https://${chainPath}etherscan.io/address/${account}`}
                   isExternal
-                  color="gray.400"
-                  ml={6}
+                  color="black"
+                  ml={4}
                   _hover={{
-                    color: "whiteAlpha.800",
+                    color: "black",
                     textDecoration: "underline",
                   }}
                 >
                   <ExternalLinkIcon mr={1} />
-                  View on Explorer
+                  VIEW ON EXPLORER
                 </Link>
               ) : (
                 ""
@@ -146,19 +155,21 @@ export default function AccountModal({ isOpen, onClose }: Props) {
         </ModalBody>
 
         <ModalFooter
+          className="font-Roboto"
           justifyContent="end"
-          background="gray.700"
-          borderBottomLeftRadius="3xl"
-          borderBottomRightRadius="3xl"
+          background="#D9D9D9"
+          borderTop="1px solid"
+          borderColor="black"
           p={6}
         >
           <Text
-            color="white"
+            borderColor="black"
+            color="black"
             textAlign="left"
             fontWeight="medium"
             fontSize="md"
           >
-            Your transactions will appear here...
+            TRANSACTIONS WILL APPEAR HERE...
           </Text>
         </ModalFooter>
       </ModalContent>

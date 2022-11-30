@@ -9,7 +9,7 @@ type Props = {
   handleOpenModal: any;
 };
 
-export default function ConnectButton({ handleOpenModal }: Props) {
+export default function ConnectButtonTest({ handleOpenModal }: Props) {
   const { globalState, dispatch } = useContext(globalContext);
   const [etherBalance, setEtherBalance] = useState(0);
   const [loading, setLoading] = useState(false);
@@ -38,33 +38,42 @@ export default function ConnectButton({ handleOpenModal }: Props) {
   // console.log('globalState', globalState)
   return globalState.account ? (
     <Box
-      mt={3}
-      display="flex"
-      alignItems="center"
-      background="gray.700"
-      borderRadius="xl"
-      py="0"
+      className="flex items-center font-Roboto justify-center bg-[#D9D9D9] text-black py-0 "
+      //   mt={3}
+      //   display="flex"
+      //   alignItems="center"
+      //   background="gray.700"
+      //   borderRadius="xl"
+      //   py="0"
     >
       <Box px="3">
-        <Text color="white" fontSize="md">
+        <Text color="black" className="font-Roboto" fontSize="mx">
           {etherBalance.toFixed(3)} ETH
         </Text>
       </Box>
       <Button
         onClick={handleOpenModal}
-        bg="gray.800"
+        className=""
+        bg="white"
         border="1px solid transparent"
         _hover={{
           border: "1px",
           borderStyle: "solid",
-          borderColor: "blue.400",
-          backgroundColor: "gray.700",
+          borderColor: "black",
+          backgroundColor: "white",
+          rounded: "none",
         }}
-        borderRadius="xl"
+        borderRadius="none"
         m="1px"
         px={3}
       >
-        <Text color="white" fontSize="md" fontWeight="medium" mr="2">
+        <Text
+          color="black"
+          rounded="none"
+          fontSize="md"
+          fontWeight="medium"
+          mr="2"
+        >
           {globalState.account &&
             `${globalState.account.slice(0, 6)}...${globalState.account.slice(
               globalState.account.length - 4,
@@ -79,22 +88,23 @@ export default function ConnectButton({ handleOpenModal }: Props) {
       isLoading={loading}
       spinner={<BeatLoader size={8} color="white" />}
       onClick={() => handleConnectWallet("MetaMask")}
-      bg="blue.800"
-      color="blue.300"
-      fontSize="lg"
-      fontWeight="medium"
-      borderRadius="xl"
+      className="font-Roboto"
+      bg="#D9D9D9"
+      color="black"
+      fontSize="xl"
+      fontWeight="none"
+      rounded="none"
       border="1px solid transparent"
       _hover={{
-        borderColor: "blue.700",
-        color: "blue.400",
+        borderColor: "black",
+        color: "grey",
       }}
       _active={{
-        backgroundColor: "blue.800",
-        borderColor: "blue.700",
+        backgroundColor: "black",
+        borderColor: "black",
       }}
     >
-      Connect with MetaMask
+      CONNECT W/METAMASK
     </Button>
   );
 }

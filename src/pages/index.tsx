@@ -31,14 +31,6 @@ const Home: FC = () => {
             // Our Account modal will handle open state & closing
           }
           <AccountModal isOpen={isOpen} onClose={onClose} />
-          {
-            // Our connect button will only handle opening
-          }
-          <ConnectButtonTest handleOpenModal={onOpen} />
-          {
-            // Our Account modal will handle open state & closing
-          }
-          <AccountModalTest isOpen={isOpen} onClose={onClose} />
         </div>
 
         <Link href="/">

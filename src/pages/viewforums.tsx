@@ -5,6 +5,7 @@ import { NFTCard } from "src/components/NFTCard";
 import Header from "@/components/HomeHeader";
 import ConnectButton from "@/components/NewWallet/ConnectButton";
 import Link from "next/link";
+import { ForumCard } from "@/components/ForumCard";
 
 const CreateForum = () => {
   const [wallet, setWalletAddress] = useState("");
@@ -28,6 +29,10 @@ const CreateForum = () => {
           <h1 className="mb-10 text-[2.5rem] max-w-md sm:max-w-2xl text-center font-Roboto font-normal leading-snug text-black">
             EXPLORE FORUMS
           </h1>
+          <div>
+            {/* basically loop through forums and their cards here */}
+            <ForumCard />
+          </div>
         </div>
       </div>
     </div>
@@ -35,12 +40,3 @@ const CreateForum = () => {
 };
 
 export default CreateForum;
-
-// TODO:
-// - this page
-// program add all address from collection
-// program add and delete recipients
-// add create new group functionality
-
-// fix wallet and its design
-// create view ballot pages

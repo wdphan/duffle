@@ -152,12 +152,3 @@ const Approve = () => {
 };
 
 export default Approve;
-
-// TODO:
-// - this page
-// program add all address from collection
-// program add and delete recipients
-// add create new group functionality
-
-// fix wallet and its design
-// create view ballot pages
